@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "622037840541",
+    "project_id": "completeauth-e08c5",
+    "storage_bucket": "completeauth-e08c5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:622037840541:android:4742225c91d24551611a74",
+        "android_client_info": {
+          "package_name": "com.completeAuth.complete_auth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVGRSK_Y_sSBWPm1nwR-0Z_b8VX7rQL9Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

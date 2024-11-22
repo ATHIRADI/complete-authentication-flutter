@@ -1,4 +1,4 @@
-import 'package:complete_auth/utils/constants/colors.dart';
+import 'package:complete_auth/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextInputField extends StatefulWidget {
@@ -55,7 +55,6 @@ class _CustomTextInputFieldState extends State<CustomTextInputField> {
                   ? null
                   : Icon(
                       widget.icon,
-                      color: AppColors.lightPrimary,
                     ),
               suffixIcon: widget.isPass == false
                   ? null
@@ -69,7 +68,7 @@ class _CustomTextInputFieldState extends State<CustomTextInputField> {
                         _isPasswordVisible
                             ? Icons.visibility_off
                             : Icons.visibility,
-                        color: AppColors.lightPrimary,
+                        // color: AppColors.lightPrimary,
                       ),
                     ),
               hintText: widget.hintText,

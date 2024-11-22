@@ -1,5 +1,5 @@
-import 'package:complete_auth/utils/constants/colors.dart';
-import 'package:complete_auth/utils/helpers/helpers.dart';
+import 'package:complete_auth/utils/colors.dart';
+import 'package:complete_auth/utils/helpers.dart';
 import 'package:flutter/material.dart';
 
 class CustomNavText extends StatelessWidget {
@@ -20,7 +20,7 @@ class CustomNavText extends StatelessWidget {
       child: Text(
         " $text".toUpperCase(),
         style: Theme.of(context).textTheme.bodySmall!.copyWith(
-              color: AppColors.lightPrimary,
+              color: AppColors.Primary,
               fontWeight: FontWeight.bold,
             ),
       ),

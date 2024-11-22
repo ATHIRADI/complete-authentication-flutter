@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string name="app_name">completeAuth</string>
+    <string name="facebook_app_id">1125404845638054</string>
+    <string name="fb_login_protocol_scheme">fb1125404845638054</string>
+    <string name="facebook_client_token">2de2a32076b12d0fe9c538af5240040c</string>
+
+</resources>

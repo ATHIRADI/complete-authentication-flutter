@@ -1,5 +1,5 @@
-import 'package:complete_auth/utils/constants/colors.dart';
-import 'package:complete_auth/utils/constants/sizes.dart';
+import 'package:complete_auth/utils/colors.dart';
+import 'package:complete_auth/utils/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -9,19 +9,20 @@ class CustomTheme {
   static ThemeData get lightTheme => ThemeData(
         useMaterial3: true,
         fontFamily: GoogleFonts.poppins().fontFamily,
-        scaffoldBackgroundColor: AppColors.lightBackground,
+        scaffoldBackgroundColor: AppColors.Background,
         appBarTheme: const AppBarTheme(
-          backgroundColor: AppColors.lightBackground,
-          foregroundColor: AppColors.lightBlackColor,
+          backgroundColor: AppColors.Background,
+          foregroundColor: AppColors.BlackColor,
         ),
         inputDecorationTheme: InputDecorationTheme(
+          prefixIconColor: AppColors.Primary,
           hintStyle: const TextStyle(
-            color: AppColors.lightBlackColor,
+            color: AppColors.BlackColor,
             fontSize: AppSizes.fontSm,
           ),
           enabledBorder: OutlineInputBorder(
             borderSide: const BorderSide(
-              color: AppColors.lightPrimary,
+              color: AppColors.Primary,
               width: AppSizes.borderWidth,
             ),
             borderRadius: BorderRadius.circular(
@@ -40,12 +41,11 @@ class CustomTheme {
           border: InputBorder.none,
           focusedBorder: OutlineInputBorder(
             borderSide: const BorderSide(
-                color: AppColors.lightBlackColor,
-                width: AppSizes.borderWidth * 1.5),
+                color: AppColors.BlackColor, width: AppSizes.borderWidth * 1.5),
             borderRadius: BorderRadius.circular(AppSizes.borderRadius),
           ),
           filled: true,
-          fillColor: AppColors.lightWhiteColor,
+          fillColor: AppColors.WhiteColor,
           contentPadding: const EdgeInsets.symmetric(
             vertical: 15,
             horizontal: 10,
@@ -53,32 +53,32 @@ class CustomTheme {
         ),
         textTheme: TextTheme(
           displayMedium: GoogleFonts.poppins().copyWith(
-            color: AppColors.lightPrimary,
+            color: AppColors.Primary,
           ),
           headlineLarge: GoogleFonts.poppins().copyWith(
-            color: AppColors.lightPrimary,
+            color: AppColors.Primary,
             fontSize: AppSizes.fontLg,
             fontWeight: FontWeight.bold,
           ),
           labelLarge: GoogleFonts.poppins().copyWith(
-            color: AppColors.lightPrimary,
+            color: AppColors.Primary,
             fontSize: AppSizes.fontMd,
             fontWeight: FontWeight.bold,
           ),
           bodyMedium: GoogleFonts.poppins().copyWith(
-            color: AppColors.lightBlackColor,
+            color: AppColors.BlackColor,
             fontSize: AppSizes.fontMd,
           ),
           bodySmall: GoogleFonts.poppins().copyWith(
-            color: AppColors.lightBlackColor,
+            color: AppColors.BlackColor,
             fontSize: AppSizes.fontSm,
           ),
         ),
         dialogTheme: DialogTheme(
-          backgroundColor: AppColors.lightWhiteColor,
+          backgroundColor: AppColors.WhiteColor,
           insetPadding: const EdgeInsets.all(25),
           contentTextStyle: GoogleFonts.poppins().copyWith(
-            color: AppColors.lightBlackColor,
+            color: AppColors.BlackColor,
             fontSize: AppSizes.fontSm,
           ),
           shape: RoundedRectangleBorder(
@@ -88,12 +88,17 @@ class CustomTheme {
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(
             textStyle: GoogleFonts.poppins().copyWith(
-              color: AppColors.lightPrimary,
+              color: AppColors.Primary,
               fontSize: AppSizes.fontMd,
               fontWeight: FontWeight.bold,
             ),
           ),
         ),
+        iconButtonTheme: IconButtonThemeData(
+          style: IconButton.styleFrom(
+            iconSize: AppSizes.iconSm,
+            foregroundColor: AppColors.Primary,
+          ),
+        ),
       );
-  static ThemeData get darkTheme => ThemeData();
 }

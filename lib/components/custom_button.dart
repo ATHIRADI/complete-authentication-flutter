@@ -1,39 +1,40 @@
-import 'package:complete_auth/utils/constants/colors.dart';
+import 'package:complete_auth/utils/colors.dart';
+import 'package:complete_auth/utils/sizes.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
   final String text;
-  final double? customVerticalPadding;
+  final double customVerticalPadding;
   final bool isLoading;
 
   const CustomButton({
     super.key,
     required this.onTap,
     required this.text,
-    this.customVerticalPadding = 15.0,
+    this.customVerticalPadding = AppSizes.paddingMd,
     this.isLoading = false,
   });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: customVerticalPadding!),
+      padding: EdgeInsets.symmetric(vertical: customVerticalPadding),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(5),
+        borderRadius: BorderRadius.circular(AppSizes.borderRadius),
         child: Material(
-          color: isLoading == true
-              ? AppColors.lightBlackColor
-              : AppColors.lightPrimary,
+          color: isLoading
+              ? AppColors.BlackColor.withOpacity(0.6)
+              : AppColors.Primary,
           child: InkWell(
             onTap: isLoading ? null : onTap,
             child: Container(
               alignment: Alignment.center,
-              padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 12),
+              padding: AppSizes.buttonpadding,
               child: Text(
-                text.toUpperCase(),
+                isLoading ? "Loading..." : text.toUpperCase(),
                 style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                      color: AppColors.lightWhiteColor,
+                      color: AppColors.WhiteColor,
                       fontWeight: FontWeight.bold,
                     ),
               ),

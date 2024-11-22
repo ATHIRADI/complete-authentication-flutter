@@ -9,14 +9,13 @@ class AppSizes {
   static const double fontLg = 20.0;
 
   // Padding and Margins
-  static const double paddingSm = 8.0;
-  static const double paddingMd = 16.0;
-  static const double paddingLg = 24.0;
+  static const double paddingSm = 5.0;
+  static const double paddingMd = 15.0;
   static const paddingScreen =
       EdgeInsets.symmetric(vertical: 10, horizontal: 20);
 
   // Icon Sizes
-  static const double iconSm = 16.0;
+  static const double iconSm = 8.0;
   static const double iconMd = 24.0;
   static const double iconLg = 32.0;
 
@@ -33,4 +32,8 @@ class AppSizes {
 
   // Button Radius
   static const double buttonRadius = 5.0;
+
+  // Button padding
+  static const buttonpadding =
+      EdgeInsets.symmetric(vertical: 15, horizontal: 12);
 }
